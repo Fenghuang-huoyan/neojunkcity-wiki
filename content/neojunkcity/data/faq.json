@@ -1,0 +1,43 @@
+[
+  {
+    "q": "When does Neo Junk City release?",
+    "a": "The Steam release_date field on 7 November 2026 is 9 Nov 2026, with coming_soon true. The English store page showed the same planned date and no user reviews. The press kit on nefariouslair.com still prints Release Date: TBD, so this site treats the Steam date as the current store listing and the press-kit line as older.",
+    "featured": true
+  },
+  {
+    "q": "Who develops and publishes Neo Junk City?",
+    "a": "The Steam appdetails payload lists developer Starblade Games and publisher Starblade Games. The legal notice is copyright 2023 Josh Hano and calls Neo Junk City a trademark of Josh Hano. The press kit names Josh Hano as creator. This wiki is not affiliated with Starblade Games, Josh Hano, or Valve.",
+    "featured": true
+  },
+  {
+    "q": "What kind of game is Neo Junk City?",
+    "a": "Steam’s short description calls it a point-and-click action-RPG with fast-paced shoot-outs and retro arcade racing, set where sinister tides rise in the Drowned City. Genres on the store page are Action, Adventure, Indie, and RPG. You play as Buster 09 and investigate a murder the store says you do not remember committing.",
+    "featured": true
+  },
+  {
+    "q": "Are there Neo Junk City codes?",
+    "a": "No redeem-code list was on the Steam store page, the demo page, or the press kit checked on 7 November 2026. This site does not invent codes and does not have a codes page.",
+    "featured": true
+  },
+  {
+    "q": "Is a Neo Junk City demo available?",
+    "a": "Yes. Steam lists a free demo, AppID 2474130, released 7 Feb 2025. The full-game store page says it features the first chapter. The demo’s own description says you explore the waterline of the Drowned City as Buster 09, investigate, drive, and shoot, and try to find your way back home.",
+    "featured": true
+  },
+  {
+    "q": "Can I play Neo Junk City on Mac or Linux?",
+    "a": "The full-game appdetails platforms field on 7 November 2026 lists Windows only. Mac and Linux are false. The demo payload says the same. Minimum spec is Windows 10 or 11, 64-bit."
+  },
+  {
+    "q": "What PC do I need for Neo Junk City?",
+    "a": "Full-game minimum on 7 November 2026: Windows 10 or 11 (64-bit), Intel Core i3-4130 or AMD FX-4300, 8 GB RAM, NVIDIA GeForce GTX 750 Ti or AMD Radeon R7 260X with 2 GB VRAM, DirectX 11, 5 GB. The demo’s minimum is lower: Windows 10, Intel Core2 Duo E6400 at 2.13 GHz, 8 GB RAM, GeForce GT 730 or Radeon HD 4830, DirectX 11, 1 GB. The full-game payload had no recommended block."
+  },
+  {
+    "q": "Does a controller work?",
+    "a": "The full-game appdetails payload sets controller_support to full and lists Full controller support, DualShock controller support, and DualSense controller support. It also lists Playable without Timed Input. The store text still describes sudden targets in shoot-outs and a Highway Authority that punishes driving too slowly. Both lines are on Steam. This site has not tested a pad."
+  },
+  {
+    "q": "Is this site official?",
+    "a": "No. neojunkcity.wiki is a fan guide. It is not affiliated with Starblade Games, Josh Hano, Valve, or Steam. Account help uses the support URL http://www.nefariouslair.com/ and the email 16bitjosh@gmail.com printed on the Steam store page. That mailbox is not this wiki’s."
+  }
+]

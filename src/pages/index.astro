@@ -1,0 +1,230 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '@framework/layouts/BaseLayout.astro';
+import QuickAnswer from '@framework/components/QuickAnswer.astro';
+import AdSlot from '@framework/components/AdSlot.astro';
+import FaqList from '@framework/components/FaqList.astro';
+import { loadData } from '@framework/lib/content';
+import { siteConfig } from '@site/site.config';
+import { faqJsonLd, websiteJsonLd } from '@framework/lib/seo';
+
+const meta = loadData<{
+  release: string;
+  price: string;
+  priceNote: string;
+  players: string;
+  playersNote: string;
+  reviews: string;
+  reviewsNote: string;
+  modes: string;
+  modesNote: string;
+  platforms: string;
+}>('meta');
+
+const faq = loadData<{ q: string; a: string; featured?: boolean }[]>('faq');
+const pages = (await getCollection('pages')).sort((a, b) => a.data.order - b.data.order);
+
+const art = {
+  header: '/images/official/steam/header.jpg',
+  hero: '/images/official/steam/library-hero.jpg',
+  hero2x: '/images/official/steam/library-hero-2x.jpg',
+  capsule: '/images/official/steam/capsule-616x353.jpg',
+  dock: '/images/official/steam/ss-00.jpg',
+  highway: '/images/official/steam/ss-01.jpg',
+  shootout: '/images/official/steam/ss-02.jpg',
+  alley: '/images/official/steam/ss-03.jpg',
+  skyline: '/images/official/steam/ss-04.jpg',
+  room: '/images/official/steam/ss-05.jpg',
+};
+
+const guideArt: Record<string, string> = {
+  guide: art.capsule,
+  walkthrough: art.alley,
+  locations: art.dock,
+  about: art.header,
+};
+
+const doors = [
+  {
+    href: '/guide',
+    num: '01',
+    title: 'Guide',
+    text: 'Buster 09, interaction blocks, the Highway Authority, shoot-outs, and the PC spec Steam printed. Not a puzzle key.',
+    image: art.capsule,
+  },
+  {
+    href: '/walkthrough',
+    num: '02',
+    title: 'Walkthrough',
+    text: 'What the first-chapter demo actually says you do. No invented room order.',
+    image: art.highway,
+  },
+  {
+    href: '/locations',
+    num: '03',
+    title: 'Locations',
+    text: 'The Drowned City, the waterline, and the teaser lines that are not a map.',
+    image: art.dock,
+  },
+];
+
+const stills = [
+  { src: art.dock, caption: 'Dock and floodwater' },
+  { src: art.highway, caption: 'Highway view' },
+  { src: art.shootout, caption: 'Shoot-out frame' },
+  { src: art.alley, caption: 'Alley scene' },
+  { src: art.skyline, caption: 'Skyline road' },
+  { src: art.room, caption: 'Round room' },
+];
+---
+<BaseLayout
+  title={siteConfig.homeTitle}
+  description={siteConfig.homeDescription}
+  jsonLd={[
+    websiteJsonLd(),
+    faqJsonLd(faq.filter((item) => item.featured).map((item) => ({ q: item.q, a: item.a }))),
+  ]}
+>
+  <main id="content">
+    <div class="shell">
+      <p class="tape">
+        <span>Fan guide · not affiliated with Starblade Games</span>
+        <span>Steam App {siteConfig.steamAppId}</span>
+        <span>{siteConfig.version.label}</span>
+      </p>
+
+      <section class="town-hero">
+        <img
+          class="hero-art"
+          src={siteConfig.art.hero}
+          srcset={`${art.hero} 1920w, ${art.hero2x} 3840w`}
+          sizes="(min-width: 1536px) 1536px, 100vw"
+          alt={siteConfig.art.heroAlt}
+          width="1920"
+          height="620"
+          fetchpriority="high"
+          decoding="async"
+        />
+        <div class="hero-panel">
+          <p class="kicker">{siteConfig.developer} · releases {meta.release}</p>
+          <h1>Neo Junk City opens on 9 November 2026.</h1>
+          <p class="lede">
+            English pages for the point-and-click action-RPG in the Drowned City: what the store says you do, what the free demo covers, and which place names are real.
+            The full game was still marked coming soon. Where a number was never printed, the page says so.
+          </p>
+          <div class="cta-row">
+            <a class="btn" href="/guide">Guide</a>
+            <a class="btn ghost" href="/walkthrough">Walkthrough</a>
+            <a class="btn ghost" href={siteConfig.steamUrl}>View on Steam</a>
+          </div>
+          <p class="version-note">{siteConfig.version.detail}</p>
+        </div>
+      </section>
+      <p class="art-credit">
+        Library hero, capsules, header, and screenshots are official Steam store assets for App {siteConfig.steamAppId}, saved from the store CDN.
+        Credits and source URLs: <a href="/images/official/steam/ATTRIBUTION.txt">ATTRIBUTION.txt</a>.
+      </p>
+
+      <section class="section">
+        <h2>Three doors</h2>
+        <p class="section-intro">
+          Open the guide, the pre-release walkthrough, or the place names. There is no codes page. The sources checked do not list a redeem program.
+        </p>
+        <div class="door-grid">
+          {doors.map((door) => (
+            <a class="door" href={door.href}>
+              <span class="card-art">
+                <img src={door.image} alt="" width="600" height="338" decoding="async" />
+                <span class="num">{door.num}</span>
+              </span>
+              <span class="card-copy">
+                <h3>{door.title}</h3>
+                <p>{door.text}</p>
+              </span>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <section class="section" aria-label="Official Steam screenshots">
+        <h2>The store’s own frames</h2>
+        <p class="section-intro">
+          Six screenshots from the Steam page: a dock, a highway, a shoot-out, an alley, a skyline road, and a round room. They are not a city map.
+        </p>
+        <div class="still-row">
+          {stills.map((still) => (
+            <figure>
+              <img src={still.src} alt="" width="600" height="338" loading="lazy" decoding="async" />
+              <figcaption>{still.caption}</figcaption>
+            </figure>
+          ))}
+        </div>
+      </section>
+
+      <section class="stat-row" aria-label="Steam figures">
+        <div class="stat"><strong>{meta.price}</strong><span>{meta.priceNote}</span></div>
+        <div class="stat"><strong>{meta.reviews}</strong><span>{meta.reviewsNote}</span></div>
+        <div class="stat"><strong>{meta.players}</strong><span>{meta.playersNote}</span></div>
+        <div class="stat"><strong>{meta.modes}</strong><span>{meta.modesNote}</span></div>
+      </section>
+
+      <section class="section home-quick">
+        <QuickAnswer
+          sentences={[
+            'Neo Junk City is a point-and-click action-RPG from Starblade Games, who also publish it, on Steam (AppID 2378230). The store date is 9 November 2026. On 7 November 2026 the appdetails payload still marked it coming soon, Windows only, and not free.',
+            'The short description puts you in the Drowned City to uncover a murder you do not remember committing, between fast shoot-outs and retro arcade racing. The press kit calls the lead, Buster 09, a law-enforcement android and uses she. The store sentence does not.',
+            'A free demo, AppID 2474130, dated 7 February 2025, covers the first chapter: the waterline, the drive, the shoot-outs, and a try at finding the way home. The full game’s minimum install is 5 GB. The demo’s is 1 GB.',
+            'There is no redeem-code list. Place names that the store never printed stay off the locations page. A screenshot is not treated as a map.',
+          ]}
+        />
+        <AdSlot name="afterQuickAnswer" />
+      </section>
+
+      <section class="section">
+        <h2>The pages</h2>
+        <p class="section-intro">
+          English only. A line from the Steam page or the press kit is labeled with the day it was read. A missing stat stays missing.
+        </p>
+        <div class="card-grid">
+          {pages.map((page) => (
+            <a class="guide-card" href={`/${page.id}`}>
+              <span class="card-art">
+                <img src={guideArt[page.id] ?? art.header} alt="" width="600" height="338" loading="lazy" decoding="async" />
+              </span>
+              <span class="card-copy">
+                <span class="section-tag">{page.data.section}</span>
+                <h3>{page.data.h1}</h3>
+                <p>{page.data.description}</p>
+              </span>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="scope">
+          <div>
+            <h2>What this wiki is for</h2>
+            <p>
+              The store page, the demo, and the press kit live at {siteConfig.databases.map((db, i) => (<><a href={db.href}>{db.label}</a>{i < siteConfig.databases.length - 1 ? ', ' : ''}</>))}. This site is the skim: the three verbs, the first-chapter demo, and the place names those sources actually use.
+            </p>
+            <p>
+              The full game is scheduled to unlock on {meta.release}. If the client and this page disagree, trust the client.
+            </p>
+          </div>
+          <div>
+            <h2>In Steam’s words</h2>
+            <p>
+              {siteConfig.developer} is both the developer and the publisher. Platforms on the API: {meta.platforms}. Genres: Action, Adventure, Indie, and RPG. The support URL on the store page is http://www.nefariouslair.com/ and the support email is 16bitjosh@gmail.com.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section home-faq">
+        <h2>Short answers</h2>
+        <FaqList featuredOnly />
+      </section>
+    </div>
+  </main>
+</BaseLayout>

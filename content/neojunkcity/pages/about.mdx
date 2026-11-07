@@ -1,0 +1,66 @@
+---
+title: "About the Neo Junk City Guide — Disclaimer and Privacy"
+description: "neojunkcity.wiki is an unofficial English fan guide for Neo Junk City. Disclaimer, privacy, empty analytics, and the Steam image credits."
+h1: "About this unofficial guide"
+section: "About"
+order: 4
+verifiedAgainst: "Site policy for neojunkcity.wiki, plus the Steam store page, demo appdetails, and the Nefarious Lair press kit, checked 7 Nov 2026."
+quickAnswer:
+  - "Neo Junk City Guide is a fan site for https://neojunkcity.wiki. It is not affiliated with Starblade Games, Josh Hano, Valve, or Steam."
+  - "Pages are English on purpose. Steam lists eight languages with interface and subtitles. This wiki writes in one."
+  - "Artwork is official Steam store art for AppID 2378230, stored with the site. Credits are in the attribution file next to the images."
+  - "analytics.gaId is empty, so Google Analytics is not loaded. Ads are off: the Adsterra slot has no id and no script. There is no redeem-code page."
+sources:
+  - label: "Steam store — Neo Junk City"
+    url: "https://store.steampowered.com/app/2378230/Neo_Junk_City/"
+  - label: "Press kit on Nefarious Lair"
+    url: "http://nefariouslair.com/neo-junk-city-press-kit/"
+  - label: "Nefarious Lair"
+    url: "http://www.nefariouslair.com/"
+related:
+  - href: "/guide"
+    label: "Guide"
+  - href: "/walkthrough"
+    label: "Walkthrough"
+  - href: "/locations"
+    label: "Locations"
+banner: "/images/official/steam/header.jpg"
+bannerAlt: "Official Steam header for Neo Junk City, neon title beside a blonde figure aiming a handgun"
+---
+
+import Callout from '@framework/components/Callout.astro';
+
+This is a short English wiki for **Neo Junk City**, Steam AppID **2378230**, built as a static site for **neojunkcity.wiki**.
+
+## Disclaimer
+
+neojunkcity.wiki is an unofficial fan-made guide for *Neo Junk City*. It is **not affiliated with, endorsed by, or sponsored by Starblade Games, Josh Hano, Valve, or Steam**. All game content, names, artwork, and trademarks belong to their respective owners. The Steam legal notice says © 2023 Josh Hano and that “Neo Junk City” is a trademark of Josh Hano. This site does not sell the game, process purchases, or recover accounts.
+
+Nothing here is account support. The Steam store page lists http://www.nefariouslair.com/ and 16bitjosh@gmail.com. The press kit lists the same email for business and press. That site and that mailbox belong to the developer, not to this wiki.
+
+The [guide](/guide), [walkthrough](/walkthrough), and [locations](/locations) pages quote dated Steam text. A place name appears only when the store or the press kit used it. There is no codes page because those sources do not publish a redeem program. There is no puzzle solution because those sources do not publish one.
+
+<Callout kind="note" title="What “checked” means">
+“Checked 7 Nov 2026” means the Steam API, the English store page, the demo listing, and the linked press kit were read that day. It does not mean someone finished the launch build. The full game was still marked coming soon.
+</Callout>
+
+## Images
+
+The library hero, the library header, capsules, the store header, and screenshots are official Steam store assets for AppID 2378230. They were downloaded from the Steam CDN and are served from this site so pages do not hotlink Steam. The file list and source URLs are in [ATTRIBUTION.txt](/images/official/steam/ATTRIBUTION.txt).
+
+## Privacy
+
+The site is static. It has no accounts and does not ask for your Steam login.
+
+`analytics.gaId` is an empty string. The base layout does not load Google Analytics.
+
+The Adsterra slot named `afterQuickAnswer` has `enabled` set to false, an empty zone id, and an empty script URL. No advertising script is included. Adult and sensitive categories stay off. The 404 page does not render a slot.
+
+The same privacy note is in the footer of every page, under the heading Privacy. The disclaimer paragraph in that footer is the short form of this page.
+
+## What is still unpublished
+
+- A numeric Steam price. The 7 November appdetails payload had an empty package list, and `is_free` was false.
+- A recommended spec block for the full game. Only the minimum was filled in.
+- A map with district names, a chapter list for the full game, and any puzzle solution.
+- Whether the 9 November build keeps the demo’s 7 February 2025 wording about the waterline and “back home.”

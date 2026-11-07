@@ -1,0 +1,58 @@
+Official Steam store assets for Neo Junk City (AppID 2378230).
+Self-hosted so the wiki does not hotlink the Steam CDN at page-view time.
+The bytes were downloaded from the Steam store CDN on 7 Nov 2026.
+Fan site: not affiliated with Starblade Games, Josh Hano, Valve, or Steam.
+Store page: https://store.steampowered.com/app/2378230/Neo_Junk_City/
+Appdetails header and capsule URLs use asset cache t=1793748430.
+
+library-hero.jpg
+  Steam library hero, 1920x620
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2378230/library_hero.jpg
+
+library-hero-2x.jpg
+  Steam library hero, 3840x1240
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2378230/library_hero_2x.jpg
+
+library-header.jpg
+  Steam library header, 460x215 (unhashed library_header.jpg returned HTTP 200)
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2378230/library_header.jpg
+
+header.jpg
+  Store header from appdetails header_image, 460x215 (hashed path)
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2378230/2f07bd838528c28d9ce0c55bdac29db46e4189b2/header.jpg?t=1793748430
+  The unhashed header.jpg URL also returned HTTP 200 on 7 Nov 2026 and was a different byte size (73041 vs 67439). It is not a second file in this folder.
+
+capsule-616x353.jpg
+  Store capsule, 616x353 (hashed path)
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2378230/22e762134e8eab309530db3acb387b13ec216eab/capsule_616x353.jpg?t=1793748430
+
+capsule-231x87.jpg
+  Small store capsule, 231x87 (hashed path from appdetails)
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2378230/fd2c3d93c48338d7349978a8bac3822802a42132/capsule_231x87.jpg?t=1793748430
+
+Screenshots are the 600x337 store thumbnails from appdetails on 7 Nov 2026 (t=1793748430).
+Full-size 1920x1080 files exist at the same paths with .1920x1080.jpg. This site stores the thumbnails.
+
+ss-00.jpg
+  Night dock, floodwater, and a moored boat.
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2378230/ss_0030f7c05990cb4299b1c1d05ce9cfde3608c474.600x338.jpg?t=1793748430
+
+ss-01.jpg
+  Third-person highway view with a speed readout and a neon skyline.
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2378230/ss_e2a787b6339d42e9c23cc00711d9da0bfef4770b.600x338.jpg?t=1793748430
+
+ss-02.jpg
+  Shoot-out frame. The UI text reads BUSTER and THE LIZARD.
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2378230/ss_51258fce60abbc623dd564cfbc2fe29a7ca65fd0.600x338.jpg?t=1793748430
+
+ss-03.jpg
+  Alley with uniformed figures and a small flying drone.
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2378230/ss_70bc677ac6090d1977d6ca1315e536e817b69579.600x338.jpg?t=1793748430
+
+ss-04.jpg
+  Car in profile against a skyline and palm trees.
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2378230/ss_903e15e441655a477de652d94c5b719efdafb975.600x338.jpg?t=1793748430
+
+ss-05.jpg
+  Round green room with several figures.
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2378230/ss_37084c8470c102c752d24333bc0e8a14d8e53ce1.600x338.jpg?t=1793748430
