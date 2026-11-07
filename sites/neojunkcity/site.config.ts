@@ -25,7 +25,7 @@ export const siteConfig = {
   homeDescription:
     'Unofficial English guide to Neo Junk City (Steam AppID 2378230). Starblade Games, planned release 9 Nov 2026, a point-and-click action-RPG with shoot-outs and arcade racing. Not affiliated with the developer or Valve.',
   analytics: {
-    gaId: '',
+    gaId: 'G-Z2CVFHMYE5',
   },
   art: {
     hero: '/images/official/steam/library-hero.jpg',
