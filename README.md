@@ -26,6 +26,6 @@ Node 22. The build is a static Astro site (`dist/`). `astro.config.mjs` sets `si
 | Content | `content/neojunkcity/` | Guide pages and JSON |
 | Routes | `src/pages/` | Home, guide slug, 404 |
 
-`analytics.gaId` is empty, so the base layout does not load Google Analytics. The Adsterra slot is disabled and has no zone id. See [ADS.md](ADS.md).
+`analytics.gaId` is empty, so the base layout does not load Google Analytics. The Adsterra Native Banner after Quick Answer is enabled for this domain. See [ADS.md](ADS.md).
 
 Steam art lives in `public/images/official/steam/` with `ATTRIBUTION.txt`. This repository does not buy a domain, edit DNS, or deploy. Vercel can serve the static `dist/` output.
