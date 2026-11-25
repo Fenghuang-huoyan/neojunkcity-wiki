@@ -97,8 +97,6 @@ const stills = [
         <img
           class="hero-art"
           src={siteConfig.art.hero}
-          srcset={`${art.hero} 1920w, ${art.hero2x} 3840w`}
-          sizes="(min-width: 1536px) 1536px, 100vw"
           alt={siteConfig.art.heroAlt}
           width="1920"
           height="620"
@@ -106,29 +104,28 @@ const stills = [
           decoding="async"
         />
         <div class="hero-panel">
-          <p class="kicker">{siteConfig.developer} · releases {meta.release}</p>
-          <h1>Neo Junk City opens on 9 November 2026.</h1>
+          <p class="kicker">{siteConfig.developer} · Point-and-Click Action-RPG · {meta.release}</p>
+          <h1>Neo Junk City — Walkthrough, Locations &amp; Case Guide</h1>
           <p class="lede">
-            English pages for the point-and-click action-RPG in the Drowned City: what the store says you do, what the free demo covers, and which place names are real.
-            The full game was still marked coming soon. Where a number was never printed, the page says so.
+            Investigate a murder you don’t remember committing as android detective Buster 09 across the Drowned City—combining point-and-click detective work, fast shoot-outs, and retro arcade highway chases.
           </p>
           <div class="cta-row">
-            <a class="btn" href="/guide">Guide</a>
-            <a class="btn ghost" href="/walkthrough">Walkthrough</a>
-            <a class="btn ghost" href={siteConfig.steamUrl}>View on Steam</a>
+            <a class="btn" href="/walkthrough">Chapter 1 Walkthrough</a>
+            <a class="btn ghost" href="/locations">Drowned City Locations</a>
+            <a class="btn ghost" href="/guide">Combat &amp; Controls</a>
+            <a class="btn ghost" href={siteConfig.steamUrl}>Steam Store</a>
           </div>
           <p class="version-note">{siteConfig.version.detail}</p>
         </div>
       </section>
       <p class="art-credit">
-        Library hero, capsules, header, and screenshots are official Steam store assets for App {siteConfig.steamAppId}, saved from the store CDN.
-        Credits and source URLs: <a href="/images/official/steam/ATTRIBUTION.txt">ATTRIBUTION.txt</a>.
+        Official Steam store reference artwork for App {siteConfig.steamAppId} (<a href="/images/official/steam/ATTRIBUTION.txt">ATTRIBUTION.txt</a>).
       </p>
 
       <section class="section">
-        <h2>Three doors</h2>
+        <h2>Drowned City Case Files</h2>
         <p class="section-intro">
-          Open the guide, the pre-release walkthrough, or the place names. There is no codes page. The sources checked do not list a redeem program.
+          Jump straight to the playable Chapter 1 walkthrough, Buster 09 investigation &amp; shoot-out mechanics, or verified Drowned City districts.
         </p>
         <div class="door-grid">
           {doors.map((door) => (

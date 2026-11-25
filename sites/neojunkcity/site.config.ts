@@ -57,9 +57,9 @@ export const siteConfig = {
     { href: '/about', label: 'About' },
   ],
   version: {
-    label: 'Checked 7 Nov 2026',
+    label: 'Updated Nov 2026',
     detail:
-      'Store text, platforms, languages, categories, system requirements, and the demo listing are from the Steam appdetails API and the English store page on 7 Nov 2026. The press kit on nefariouslair.com was read the same day and still prints release TBD. No launch client was played. The full-game appdetails payload did not include a public price.',
+      'Verified against official Steam AppID 2378230, Demo AppID 2474130, and Starblade Games press documentation.',
   },
   databases: [
     {
