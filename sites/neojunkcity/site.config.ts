@@ -49,12 +49,14 @@ export const siteConfig = {
   ],
   moreNav: [
     { href: '/about', label: 'About' },
+    { href: '/privacy', label: 'Privacy' },
   ],
   footerNav: [
     { href: '/guide', label: 'Guide' },
     { href: '/walkthrough', label: 'Walkthrough' },
     { href: '/locations', label: 'Locations' },
     { href: '/about', label: 'About' },
+    { href: '/privacy', label: 'Privacy' },
   ],
   version: {
     label: 'Updated Nov 2026',

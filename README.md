@@ -20,12 +20,12 @@ Node 22. The build is a static Astro site (`dist/`). `astro.config.mjs` sets `si
 | Layer | Path | Role |
 | --- | --- | --- |
 | Site config | `sites/neojunkcity/site.config.ts` | Domain, Steam AppID, theme, nav |
-| Ads | `sites/neojunkcity/ads.config.ts` | Ad slot left empty for this domain |
+| Ads | `sites/neojunkcity/ads.config.ts` | Display ad slot disabled (`enabled: false`) |
 | Active site | `sites/active` → `neojunkcity` | What the build reads |
 | Framework | `framework/` | Layout, SEO, ad slot |
 | Content | `content/neojunkcity/` | Guide pages and JSON |
 | Routes | `src/pages/` | Home, guide slug, 404 |
 
-`analytics.gaId` is `G-Z2CVFHMYE5`, so the base layout loads GA4 on content pages. The Adsterra Native Banner after Quick Answer is enabled for this domain. See [ADS.md](ADS.md).
+`analytics.gaId` is `G-Z2CVFHMYE5`, so the base layout loads GA4 via gtag. The Adsterra Native Banner slot in `sites/neojunkcity/ads.config.ts` is disabled (`enabled: false`). See [ADS.md](ADS.md).
 
 Steam art lives in `public/images/official/steam/` with `ATTRIBUTION.txt`. This repository does not buy a domain, edit DNS, or deploy. Vercel can serve the static `dist/` output.
